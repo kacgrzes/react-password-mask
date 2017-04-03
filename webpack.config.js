@@ -22,11 +22,6 @@ module.exports = {
         use: 'babel-loader',
         exclude: /node_modules/
       },
-      {
-        test: /\.js$/,
-        use: 'eslint-loader',
-        exclude: /node_modules/
-      }
     ]
   },
   plugins: [new webpack.optimize.UglifyJsPlugin({ minimize: true })]

@@ -12,6 +12,14 @@ export default class Example extends Component {
     });
   }
 
+  handleBlur(e) {
+    console.log('blur')
+  }
+
+  handleFocus(e) {
+    console.log('focues')
+  }
+
   render() {
     return (
       <div>
@@ -23,6 +31,9 @@ export default class Example extends Component {
           name="password"
           placeholder="Enter password"
           onChange={this.handleChange.bind(this)}
+          onBlur={this.handleBlur.bind(this)}
+          onFocus={this.handleFocus.bind(this)}
+
           inputStyles={{
             padding: '8px',
             fontSize: '16px'

@@ -22,7 +22,7 @@ export default class PasswordMask extends Component {
   }
 
   invokeCallbacks(value, passwordShown) {
-    const { onShow, onHide, onToggle } = this.props;
+    const { onShow, onHide, onToggle} = this.props;
 
     if (onToggle) {
       onToggle(value);
@@ -65,7 +65,7 @@ export default class PasswordMask extends Component {
   }
 
   render() {
-    const { value, id, name, className, placeholder, onChange } = this.props;
+    const { value, id, name, className, placeholder, onChange, ...domProps } = this.props;
     const { passwordShown } = this.state;
 
     return (
@@ -85,6 +85,7 @@ export default class PasswordMask extends Component {
           }}
           onChange={onChange}
           onFocus={() => this.setState({ hasBeenFocused: true })}
+          {...domProps}
         />
 
         <input
@@ -102,6 +103,7 @@ export default class PasswordMask extends Component {
           }}
           onChange={onChange}
           onFocus={() => this.setState({ hasBeenFocused: true })}
+          {...domProps}
         />
 
         <a
