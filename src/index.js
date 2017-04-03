@@ -13,7 +13,10 @@ export default class PasswordMask extends Component {
     onHide: PropTypes.func,
     onToggle: PropTypes.func,
     inputStyles: PropTypes.any,
-    buttonStyles: PropTypes.any
+    buttonStyles: PropTypes.any,
+    buttonShow: PropTypes.any,
+    buttonHide: PropTypes.any,
+
   }
 
   state = {
@@ -118,7 +121,7 @@ export default class PasswordMask extends Component {
             this.togglePasswordMask();
           }}
         >
-          {passwordShown ? 'Hide' : 'Show'}
+          {passwordShown ? this.props.buttonShow : this.props.buttonHide}
         </a>
       </div>
     );
