@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FaBeer from 'react-icons/lib/fa/beer';
+import { FaEyeSlash, FaEye } from 'react-icons/lib/fa';
 import PasswordMask from '../src/index';
 
 export default class Example extends Component {
@@ -34,8 +34,8 @@ export default class Example extends Component {
           onChange={this.handleChange.bind(this)}
           onBlur={this.handleBlur.bind(this)}
           onFocus={this.handleFocus.bind(this)}
-          buttonShow={<FaBeer />}
-          buttonHide={<FaBeer />}
+          buttonShow={<FaEye />}
+          buttonHide={<FaEyeSlash />}
           inputStyles={{
             padding: '8px',
             fontSize: '16px'
