@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { FaEyeSlash, FaEye } from 'react-icons/lib/fa';
 import { inputStyles, buttonStyles } from './styles.js';
 
 export default class PasswordMask extends Component {
@@ -14,9 +15,6 @@ export default class PasswordMask extends Component {
     onToggle: PropTypes.func,
     inputStyles: PropTypes.any,
     buttonStyles: PropTypes.any,
-    buttonShow: PropTypes.any,
-    buttonHide: PropTypes.any,
-
   }
 
   state = {
@@ -121,7 +119,7 @@ export default class PasswordMask extends Component {
             this.togglePasswordMask();
           }}
         >
-          {passwordShown ? this.props.buttonShow : this.props.buttonHide}
+          {passwordShown ? <FaEye/> : <FaEyeSlash/>}
         </a>
       </div>
     );
